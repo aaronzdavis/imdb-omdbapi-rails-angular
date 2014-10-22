@@ -61,15 +61,23 @@ input {
   }
 }
 
-.movie-details {
-  padding-bottom: 150px;
-}
-
 .poster {
   img { width: 100%; height: auto; }
   @media #{$tablet-portrait} {
-    img { width: auto; }
     float: left;
-    padding: 0 25px 25px 0;
+    padding-right: 8%;
+    width: 46%;
   }
+}
+
+.details {
+  @media #{$tablet-portrait} {
+    float: left;
+    width: 46%;
+  }
+}
+
+.footer {
+  padding-bottom: 150px;
+  clear: both;
 }
