@@ -5,6 +5,8 @@
     input type="text" name="t" placeholder="Search" value="{{search}}"
     button.hide Search
 
+  span ng-hide="!error" No Results Found
+
   ul.movie-list ng-hide="!movies"
     li.post[ng-repeat=("movie in movies")]
       .movie

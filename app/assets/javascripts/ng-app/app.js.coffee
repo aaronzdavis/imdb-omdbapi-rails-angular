@@ -24,6 +24,7 @@ app.controller "SearchCtrl", ($scope, $http, $routeParams) ->
   $http.get("http://www.omdbapi.com/?s=" + $routeParams.t ).success (data) ->
     $scope.search = $routeParams.t.replace('+', ' ')
     $scope.movies = data.Search
+    $scope.error = data.Error
 
 app.controller "MovieCtrl", ($scope, $http, $routeParams) ->
   $http.get("http://www.omdbapi.com/?i=" + $routeParams.id ).success (data) ->
