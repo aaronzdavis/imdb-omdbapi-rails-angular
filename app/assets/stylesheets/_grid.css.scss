@@ -1,0 +1,6 @@
+@import 'initialize';
+
+.container {
+  @include outer-container();
+  padding: 0 10px;
+}

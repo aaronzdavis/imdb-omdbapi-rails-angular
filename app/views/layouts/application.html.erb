@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="omdbapi">
+<head>
+  <title>Omdbapi</title>
+  <%= stylesheet_link_tag     'application', media: 'all' %>
+  <%= javascript_include_tag  '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js',
+                              '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js',
+                              '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-resource.min.js',
+                              '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-sanitize.min.js',
+                              'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div ng-view>
+  <%= yield %>
+</div>
+
+</body>
+</html>

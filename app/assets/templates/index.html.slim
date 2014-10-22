@@ -1,0 +1,85 @@
+.container
+  h1 IMDB Movie Search
+
+  form action="/search"
+    input type="text" name="t" placeholder="Search" value="{{search}}"
+    button.hide Search
+
+  ul.movie-list ng-hide="!movies"
+    li.post[ng-repeat=("movie in movies")]
+      .movie
+        a href="/movie/{{movie.imdbID}}"
+          | {{movie.Title}} ({{movie.Year}})
+
+  .movie-details ng-hide="!movie"
+    h2
+      | {{movie.Title}} ({{movie.Year}})
+    .poster
+      img src="{{movie.Poster}}"
+    .details
+      p class="rating {{good_or_bad}}"
+        strong IMDB Rating:
+        '
+        | {{movie.imdbRating}}
+      p
+        strong Rating:
+        '
+        | {{movie.Rated}}
+      p
+        strong Released:
+        '
+        | {{movie.Released}}
+      p
+        strong Runtime:
+        '
+        | {{movie.Runtime}}
+      p
+        strong Genre:
+        '
+        | {{movie.Genre}}
+      p
+        strong Director:
+        '
+        | {{movie.Director}}
+      p
+        strong Writer:
+        '
+        | {{movie.Writer}}
+      p
+        strong Actors:
+        '
+        | {{movie.Actors}}
+      p
+        strong Plot:
+        '
+        | {{movie.Plot}}
+      p
+        strong Language:
+        '
+        | {{movie.Language}}
+      p
+        strong Country
+        '
+        |  {{movie.Country}}
+      p
+        strong Awards:
+        '
+        | {{movie.Awards}}
+
+  / {{movie.Released} ":"11 Jun 1969"
+  / {{movie.Runtime} ":"128 min"
+  / {{movie.Genre} ":"Adventure, Western, Drama"
+  / {{movie.Director} ":"Henry Hathaway"
+  / {{movie.Writer} ":"Charles Portis (novel), Marguerite Roberts (screenplay)"
+  / {{movie.Actors} ":"John Wayne, Glen Campbell, Kim Darby, Jeremy Slate"
+  / {{movie.Plot} ":"A drunken, hard-nosed U.S. Marshal and a Texas Ranger help a stubborn young woman track down her father"s murderer in Indian territory."
+  / {{movie.Language} ":"English"
+  / {{movie.Country} ":"USA"
+  / {{movie.Awards} ":"Won 1 Oscar. Another 7 wins & 5 nominations."
+  / {{movie.Poster} ":"http://ia.media-imdb.com/images/M/MV5BMTYwNTE3NDYzOV5BMl5BanBnXkFtZTcwNTU5MzY0MQ@@._V1_SX300.jpg"
+  / {{movie.Metascore} ":"N/A"
+  / {{movie.imdbRating} ":"7.4"
+  / {{movie.imdbVotes} ":"28,457"
+  / {{movie.imdbID} ":"tt0065126"
+  / {{movie.Type} ":"movie"
+  / {{movie.Response} ":"True"}
